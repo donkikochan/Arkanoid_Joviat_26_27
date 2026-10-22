@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Brick : MonoBehaviour
@@ -12,5 +14,13 @@ public class Brick : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Ball")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

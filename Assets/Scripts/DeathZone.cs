@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DeathZone : MonoBehaviour
@@ -12,5 +13,15 @@ public class DeathZone : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Ball")
+        {
+            Ball b = other.gameObject.GetComponent<Ball>();
+            b.Restart();
+            
+        }
     }
 }
