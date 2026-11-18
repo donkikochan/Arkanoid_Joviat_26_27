@@ -920,6 +920,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   speed: 50
+  keyLeft: 0
+  keyRight: 0
+  border_right: {fileID: 0}
+  border_left: {fileID: 0}
 --- !u!50 &1650418625
 Rigidbody2D:
   serializedVersion: 5
@@ -1744,7 +1748,7 @@ GameObject:
   m_Layer: 0
   m_Name: BrickManager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1757,7 +1761,7 @@ Transform:
   m_GameObject: {fileID: 2100283370}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.5, z: 0}
+  m_LocalPosition: {x: 0, y: 2.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1773,7 +1777,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1d4662170ea4947a05725b74d7f1208, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BrickManager
   brickPrefab: {fileID: 5830031772738153687, guid: b350fbcc5232c4e54a6aac17f68e90b8, type: 3}
   columns: 7
