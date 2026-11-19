@@ -26,6 +26,7 @@ public class Brick : MonoBehaviour
             
             //Comunicate with GameManager
             gm.AddScore(1);
+            gm.BreakBrick();
         }
     }
 }

@@ -8,6 +8,10 @@ public class BrickManager : MonoBehaviour
     [Min(1)] public int rows = 3;
     [Min(0f)] public float spacing = 0.2f;
 
+    public int GetTotalBricks()
+    {
+        return rows * columns;
+    }
     private void Start()
     {
         if (brickPrefab == null)
