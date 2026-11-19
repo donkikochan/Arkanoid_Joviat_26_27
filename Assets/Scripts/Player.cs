@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log("FixedUpdate");
         if (Input.GetKey(keyRight) &&
             transform.position.x < border_right.transform.position.x)
         {
