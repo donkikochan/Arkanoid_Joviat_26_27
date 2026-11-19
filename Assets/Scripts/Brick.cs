@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Brick : MonoBehaviour
 {
+    GameManager gm;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        GameObject o = GameObject.FindGameObjectWithTag("GameController");
+        gm = o.GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -21,6 +23,9 @@ public class Brick : MonoBehaviour
         if (other.gameObject.name == "Ball")
         {
             Destroy(this.gameObject);
+            
+            //Comunicate with GameManager
+            gm.AddScore(1);
         }
     }
 }

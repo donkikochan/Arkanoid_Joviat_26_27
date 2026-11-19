@@ -1,7 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public TextMeshProUGUI scoreText;
+    private int Total_score = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,5 +15,13 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddScore(int score)
+    {
+        Total_score+=score;
+        Debug.Log(Total_score);
+        
+        scoreText.text = "Score: " + Total_score;
     }
 }
