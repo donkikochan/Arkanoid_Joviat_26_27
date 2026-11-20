@@ -4,8 +4,8 @@ using UnityEngine;
 public class DeathZone : MonoBehaviour
 {
 
-    
 
+    public GameManager gm;
      
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,7 +25,7 @@ public class DeathZone : MonoBehaviour
         {
             Ball b = other.gameObject.GetComponent<Ball>();
             b.Restart();
-            
+            gm.LifeManager();
         }
     }
 }

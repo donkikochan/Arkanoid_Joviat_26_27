@@ -9,13 +9,20 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     private int bricksBreaks = 0;
     private int Total_score = 0;
-
+    public int numLifes = 3;
+    
+    public TextMeshProUGUI  numLifesText;
     public GameObject panelWin;
+    public GameObject panelLose;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         panelWin.SetActive(false);
+        panelLose.SetActive(false);
+        numLifesText.SetText("Lifes: " + numLifes);
+        scoreText.SetText("Score: "  + Total_score);
+        
     }
 
     // Update is called once per frame
@@ -49,5 +56,17 @@ public class GameManager : MonoBehaviour
         //TODO: guardar en dades persistens el nivell +1
         SceneManager.LoadScene("GameScene");
         
+    }
+
+    public void LifeManager()
+    {
+        Debug.Log("LifeManager");
+        numLifes--;
+        numLifesText.text = "Lifes: " + numLifes;
+        if (numLifes <= 0)
+        {
+            Destroy(ball);
+            panelLose.SetActive(true);
+        }
     }
 }
